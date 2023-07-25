@@ -1,0 +1,16 @@
+.image_container{
+    width: 50%;
+    display: grid;
+    grid-template-columns: 430px 430px 430px 430px;
+    gap: 2%;
+}
+
+.images{
+    width: 100%;
+    overflow: hidden;
+}
+.img{
+    width: 100%
+    /* height: auto;
+    object-fit: cover; */
+}
