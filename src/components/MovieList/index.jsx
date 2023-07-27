@@ -85,9 +85,7 @@ const MovieList = () => {
     <div  >
       <div className="background">
      <SearchBar onSearch={handleSearchFunction} />
-     {/* <CategoryFilter
-     selectedCategory={selectedCategory}
-     handleCategoryChange={handleCategoryChange}/> */}
+  
      </div>
       {error && <p>{error}</p>}
       <div className="image-container">

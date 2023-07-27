@@ -5,7 +5,7 @@ import { getMovieDetails } from "../utils/utilities";
 const IMAGE_BASE_URL=process.env.REACT_APP_IMAGE_BASE_URL;
 
 
-const MovieDetails =()=>{
+const Details =()=>{
     const {viewId}= useParams();
     const [moviedetail,setMoviedetail]=useState(null)
     useEffect(()=>{
@@ -68,4 +68,4 @@ return(
 );
 };
 
-export default MovieDetails
+export default Details
