@@ -7,7 +7,6 @@ import SearchBar from "../SearchBar";
 import { Link } from "react-router-dom";
 import "./style.css"
 // import CategoryFilter from "../../filter/moviefilter";
-import Carousels from "../../carousel";
 
 
 const BASE_URL = process.env.REACT_APP_BASE_URL;
@@ -89,7 +88,6 @@ const MovieList = () => {
      {/* <CategoryFilter
      selectedCategory={selectedCategory}
      handleCategoryChange={handleCategoryChange}/> */}
-     <Carousels/>
      </div>
       {error && <p>{error}</p>}
       <div className="image-container">
