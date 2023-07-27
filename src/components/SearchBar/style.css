@@ -1,0 +1,48 @@
+.input{
+    /* width: 40%;
+    margin-right: 50px;    
+    border: 1px solid #fff; */
+    height: 40px;
+    outline: 0;
+    background-color: transparent;
+    font-size: 16px;
+    color: #000000;
+    padding: 5px 100px 5px 15px;
+    border-radius: 10px;
+}
+.M{
+    margin-right: 20%;
+    color: black;
+    font-size: large;
+    font-weight: bold;
+}
+.oo{
+    color: #bdbd00;
+}
+button:hover {
+    background-color:#0087bd;
+    color: #d42626;
+    outline: 0;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: 0;
+    cursor: pointer;
+  }
+  button{
+    border-radius: 5px;
+    height: 40px;
+    
+  }
+  .Home{
+    margin-right: 5px;
+    padding-right: 8px;
+  }
+  .btnsearch{
+    margin-right: 10%;
+  }
+  .mylist{
+    margin-right: 50px;
+  }
+  .nav{
+    margin-left: 10%;
+  }

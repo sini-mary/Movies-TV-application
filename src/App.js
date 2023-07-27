@@ -1,20 +1,22 @@
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route,Navigate } from 'react-router-dom';
 import MovieList from './components/MovieList';
-import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
+import MovieDetails from './MovieDetails';
 
 function App() {
   return (
     <div>
       <Router>
-      <MovieList/>
+        {/* <MovieList/> */}
 
         <Routes>
-        <Route path="*" component={MovieList} />
-        
+          <Route path="*" element={<Navigate to="/MovieList/"/>} />
+          <Route path ='/MovieList' element={<MovieList/>}/>
+          <Route path='/MovieDetails/:viewId'  element={<MovieDetails/>} />
         </Routes>
       </Router>
-
-     
     </div>
   );
 }
+
 export default App;

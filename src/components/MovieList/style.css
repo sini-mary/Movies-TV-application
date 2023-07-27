@@ -1,16 +1,27 @@
-.image_container{
-    width: 50%;
-    display: grid;
-    grid-template-columns: 430px 430px 430px 430px;
-    gap: 2%;
-}
+.image-container{
+display: grid;
+grid-template-columns: repeat(3,1fr);
+flex-wrap: wrap;
+column-gap: 5em;
+row-gap: 8em;
+align-items: center;
+transition: transform 750ms;
+will-change: transform;
 
-.images{
-    width: 100%;
-    overflow: hidden;
+
+
 }
-.img{
-    width: 100%
-    /* height: auto;
-    object-fit: cover; */
+.image-container:hover{
+    transform: translateY(10px);
+
+   
+
+
+}
+.nav{
+    display: flex;
+    gap: 6px;
+}
+.background{
+
 }
