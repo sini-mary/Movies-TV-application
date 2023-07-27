@@ -2,10 +2,11 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route,Navigate } from 'react-router-dom';
 import MovieList from './components/MovieList';
 import MovieDetails from './MovieDetails';
+import "./App.css"
 
 function App() {
   return (
-    <div>
+    <div className='main'>
       <Router>
         {/* <MovieList/> */}
 

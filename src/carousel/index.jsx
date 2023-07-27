@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import { getCategories } from "../utils/utilities";
+import "./style.css"
 const IMAGE_BASE_URL= process.env.REACT_APP_IMAGE_BASE_URL;
 
 
@@ -15,12 +16,12 @@ const Carousels = () => {
   useEffect(() => {
     (async() => {
       const images = await getCategories();
-      setImages(images.results.slice(0, 4));
+      setImages(images.results.slice(0, 7));
        console.log({ images });
     })();
   }, []);
   const carouselSlides = images.map((image) =>(
-    <div className="resize" key={image.alt}>
+    <div className="imagesize" key={image.alt}>
       <img
         src={`${IMAGE_BASE_URL}${image.poster_path}`} alt={image.title}/>
           <p>{image.release_date}</p>

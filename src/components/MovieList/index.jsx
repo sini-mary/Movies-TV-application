@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from "react";
 import { getMovies } from "../../utils/utilities";
-
 import ImageContainer from "../../atoms/image_container/image";
 import SearchBar from "../SearchBar";
 import { Link } from "react-router-dom";
@@ -21,7 +20,7 @@ const MovieList = () => {
   const [error, setError] = useState(null);
   
   const [selectedCategory, setSelectedCategory] = useState("all");
-  const [selectedCategoryName, setSelectedCategoryName] = useState("All");
+  const [ setSelectedCategoryName] = useState("All");
   useEffect(() => {
     // Fetch movies when the component mounts
     const fetchMovies = async () => {
@@ -31,7 +30,8 @@ const MovieList = () => {
         setLoading(false);
       } catch (error) {
         console.error("Error fetching movies:", error.message);
-        setLoading(false); // Set loading to false even if there's an error
+        setLoading(false); 
+        // Set loading to false even if there's an error
         setError("Failed to fetch movies.");
       }
     };
@@ -43,11 +43,6 @@ const MovieList = () => {
     setSelectedCategory(categoryId);
     setSelectedCategoryName(categoryName);
   };
-
-  const filteredMovies =
-    selectedCategory === "all"
-      ? movies
-      : movies.filter((movie) => movie.genre_ids.includes(parseInt(selectedCategory)));
 
   const handleSearchFunction = async (searchValue) => {
     if (!searchValue.trim()) {

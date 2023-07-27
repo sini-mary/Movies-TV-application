@@ -31,17 +31,7 @@ const MovieDetails =()=>{
 
 return(
 
-    // <div>
-    // <div >
-    //     {/* <img src={moviedetail.} alt={moviedetail.title}/> */}
-    //            {/* <img
-    //             src={`${IMAGE_BASE_URL}`}
-    //             alt={moviedetail.}/> */}
-    //             <p>
-    //                 {(`${moviedetail.vote_count}`)}
-    //             </p>
-    // </div>
-    // </div>
+ 
 
     <>
     {moviedetail && (
@@ -79,6 +69,5 @@ return(
   </>
 );
 };
-// )
-// }
+
 export default MovieDetails
