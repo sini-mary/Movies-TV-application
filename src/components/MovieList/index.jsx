@@ -6,7 +6,7 @@ import ImageContainer from "../../atoms/image_container/image";
 import SearchBar from "../SearchBar";
 import { Link } from "react-router-dom";
 import "./style.css"
-import CategoryFilter from "../../filter/moviefilter";
+// import CategoryFilter from "../../filter/moviefilter";
 import Carousels from "../../carousel";
 
 
@@ -19,10 +19,9 @@ const MovieList = () => {
   const [searchPerformed, setSearchPerformed] = useState(false);
   const [error, setError] = useState(null);
   
-  const [selectedCategory, setSelectedCategory] = useState("all");
-  const [ setSelectedCategoryName] = useState("All");
+  // const [selectedCategory, setSelectedCategory] = useState("all");
+  // const [ setSelectedCategoryName] = useState("All");
   useEffect(() => {
-    // Fetch movies when the component mounts
     const fetchMovies = async () => {
       try {
         const moviesData = await getMovies();
@@ -31,7 +30,6 @@ const MovieList = () => {
       } catch (error) {
         console.error("Error fetching movies:", error.message);
         setLoading(false); 
-        // Set loading to false even if there's an error
         setError("Failed to fetch movies.");
       }
     };
@@ -39,10 +37,10 @@ const MovieList = () => {
     fetchMovies();
   }, []);
 
-  const handleCategoryChange = (categoryId, categoryName) => {
-    setSelectedCategory(categoryId);
-    setSelectedCategoryName(categoryName);
-  };
+  // const handleCategoryChange = (categoryId, categoryName) => {
+  //   setSelectedCategory(categoryId);
+  //   setSelectedCategoryName(categoryName);
+  // };
 
   const handleSearchFunction = async (searchValue) => {
     if (!searchValue.trim()) {
@@ -88,9 +86,9 @@ const MovieList = () => {
     <div  >
       <div className="background">
      <SearchBar onSearch={handleSearchFunction} />
-     <CategoryFilter
+     {/* <CategoryFilter
      selectedCategory={selectedCategory}
-     handleCategoryChange={handleCategoryChange}/>
+     handleCategoryChange={handleCategoryChange}/> */}
      <Carousels/>
      </div>
       {error && <p>{error}</p>}

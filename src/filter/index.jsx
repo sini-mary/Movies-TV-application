@@ -2,7 +2,7 @@ import React from "react";
 
 const CategoryButtons = ({ selectedCategory, handleCategoryChange }) => {
   return (
-    <div className="category-buttons">
+    <div >
       <button
         className={selectedCategory === "all" ? "active" : "inactive"}
         onClick={() => handleCategoryChange("all")}

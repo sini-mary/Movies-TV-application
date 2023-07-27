@@ -25,7 +25,7 @@ const CategoryFilter = ({ selectedCategory, handleCategoryChange }) => {
   ];
 
   return (
-    <div className="category-buttons">
+    <div >
       {categories.map((category) => (
         <button
           key={category.id}
